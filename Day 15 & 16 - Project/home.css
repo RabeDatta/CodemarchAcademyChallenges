@@ -3,7 +3,6 @@
   display: flex;
   min-height: var(---height-value);
   animation: 2s fadeIn;
-  border: 1px pink solid;
 }
 
 /* content */
@@ -44,9 +43,6 @@
 .hide-hero {
   display: none;
 }
-/* 
-@media (min-width: 576px) {
-} */
 
 @media (min-width: 768px) {
   .main-content {
