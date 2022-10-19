@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="./services.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body>
+        <!-- navbar section -->
+        <div class="wrapper navBar">
+
+            <a class="logo" href="#"> Codemarch Academy </a>
+            <div class="ham-container">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+        </div>
+
+
+
+        <div class="wrapper">
+
+            <!-- nav menus -->
+            <nav class="nav-items hide-nav-items">
+
+                <!-- side icons -->
+                <div class="social-media-icons">
+                    <div class="centered-icons">
+                        <a href="#"> <img src="./assets/facebookIcon.png" alt="" class="icon icon-fb"> </a>
+                        <a href="https://twitter.com/Codemarch"> <img src="./assets/twitterIcon.png" alt=""
+                                class="icon">
+                        </a>
+                        <a href="#"> <img src="/assets/IngramIcon.png" alt="" class="icon"> </a>
+                    </div>
+                    <div class="last-icon">
+                        <a href="#"> <img src="/assets/atIcon.png" alt="" class="icon icon-email"></a>
+                    </div>
+                </div>
+
+                <!-- overlay menus -->
+
+                <div class="nav-lists">
+                    <ul>
+                        <li><a href="./home.html"> Home </a> </li>
+                        <li><a href="./services.html"> Services </a> </li>
+                        <li><a href="./works.html"> Work </a> </li>
+                        <li><a href="./contact.html"> Contact</a> </li>
+                        <footer>
+                            <small>&copy; Created by Rabe Datta </small>
+                        </footer>
+                    </ul>
+                </div>
+
+            </nav>
+
+
+            <!-- services section -->
+            <div class="services">
+                <main>
+                    <h2 class="title"> Code Camp Services </h2>
+                    <p class="sub-title"> Code camp is a Bootcamp where we will give out resources pertaining to the
+                        skills. You can learn the fundamentals of HTML, CSS, TailWind CSS, and Git here at CodeCamp.
+                    </p>
+
+                    <section class="cards">
+                        <div class="card card-one">
+                            <div class="card-img-container">
+                                <img src="./assets/servicesIcon_1.png" alt="" class="card-img">
+                            </div>
+                            <h4 class="card-title"> HTML </h4>
+                            <p class="card-content"> Hyper Text Mark-up Language (a system used to mark text for World
+                                Wide Web pages in order to obtain
+                                colours, style,pictures,etc.)</p>
+                        </div>
+
+                        <div class="card card-two">
+                            <div class="card-img-container">
+                                <img src="./assets/servicesIcon_2.png" alt="" class="card-img">
+                            </div>
+                            <h4 class="card-title"> CSS </h4>
+                            <p class="card-content"> CSS stands for Cascading Style Sheets·CSS describes how HTML
+                                elements are to be displayed on screen, paper,
+                                or in other media.</p>
+                        </div>
+
+                        <div class="card card-three">
+                            <div class="card-img-container">
+                                <img src="./assets/servicesIcon_3.png" alt="" class="card-img">
+                            </div>
+                            <h4 class="card-title"> Tailwind CSS </h4>
+                            <p class="card-content"> Tailwind CSS is an open source CSS framework. The main feature
+                                of
+                                this library is that, unlike other CSS
+                                frameworks like Bootstrap.</p>
+                        </div>
+
+                        <div class="card card-four">
+                            <div class="card-img-container">
+                                <img src="./assets/servicesIcon_4.png" alt="" class="card-img">
+                            </div>
+                            <h4 class="card-title"> Git &amp; Github </h4>
+                            <p class="card-content"> git is a version control system that lets you records changes
+                                to a
+                                file or set of files over time so that you can recall specific versions later.
+                            </p>
+                        </div>
+
+                        <div class="card card-five">
+                            <div class="card-img-container">
+                                <img src="./assets/servicesIcon_5.png" alt="" class="card-img">
+                            </div>
+                            <h4 class="card-title">Design </h4>
+                            <p class="card-content">A design is a plan or specification for the construction of an
+                                object or system or for the implementation of an activity or process, or the result
+                                of
+                                that plan or specification in the form of a prototype, product or process.</p>
+                        </div>
+
+                        <div class="card card-six">
+                            <div class="card-img-container">
+                                <img src="./assets/servicesIcon_6.png" alt="" class="card-img">
+                            </div>
+                            <h4 class="card-title">Error Fixing </h4>
+                            <p class="card-content"> A bug fix is a change to a system or product designed to handle
+                                a
+                                programming bug/glitch.</p>
+                        </div>
+
+                    </section>
+
+                </main>
+            </div>
+
+
+        </div>
+
+        <script>
+
+            const $hamButton = document.querySelector('.ham-container');
+            const $navBar = document.querySelector('.navBar');
+
+            $hamButton.addEventListener('click', function () {
+                $hamButton.classList.toggle('change');
+                document.querySelector('.services').classList.toggle('hide-services');
+                document.querySelector('.nav-items').classList.toggle("hide-nav-items");
+            })
+
+            window.addEventListener('scroll', function (event) {
+                event.preventDefault();
+
+                if (window.scrollY >= 30) {
+                    $navBar.classList.add('changeNavHeight')
+                } else {
+                    $navBar.classList.remove('changeNavHeight')
+                }
+            });
+
+
+        </script>
+    </body>
+
+
+
+</body>
+
+</html>
