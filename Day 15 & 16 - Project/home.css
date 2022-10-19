@@ -10,7 +10,6 @@
 .main-content {
   display: flex;
   flex-direction: column;
-  /* border: 1px pink solid; */
   align-items: center;
   justify-content: space-evenly;
 }
@@ -45,20 +44,12 @@
 .hide-hero {
   display: none;
 }
-
+/* 
 @media (min-width: 576px) {
-  .selector {
-    background-color: #f00;
-  }
-}
+} */
 
 @media (min-width: 768px) {
   .main-content {
     flex-direction: row;
   }
-}
-
-@media (min-width: 992px) {
-}
-@media (min-width: 1200px) {
 }
