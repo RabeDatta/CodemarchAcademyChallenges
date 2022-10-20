@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="./contact.css">
+    <title>Contact us</title>
+</head>
+
+<body>
+
+    <body>
+        <!-- navbar section -->
+        <div class="wrapper navBar">
+            <a class="logo" href="#top"> Codemarch Academy </a>
+            <div class="ham-container">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+
+            <!-- nav menus -->
+            <nav class="nav-items hide-nav-items">
+
+                <!-- side icons -->
+                <div class="social-media-icons">
+                    <div class="centered-icons">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <img src="./assets/facebookIcon.png" alt="facebook" class="icon icon-fb"> </a>
+                        <a href="https://twitter.com/Codemarch" target="_blank">
+                            <img src="./assets/twitterIcon.png" alt="twitter" class="icon">
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <img src="/assets/IngramIcon.png" alt="instagram" class="icon">
+                        </a>
+                    </div>
+                    <div class="last-icon">
+                        <a href="mailto:codemarch123@gmail.com">
+                            <img src="/assets/atIcon.png" alt="email" class="icon icon-email">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- overlay menus -->
+
+                <div class="nav-lists">
+                    <ul>
+                        <li><a href="./home.html"> Home </a> </li>
+                        <li><a href="./services.html"> Services </a> </li>
+                        <li><a href="./works.html"> Work </a> </li>
+                        <li><a href="./contact.html"> Contact</a> </li>
+                        <footer>
+                            <small>&copy; Created by
+                                <a href="https://github.com/RabeDatta" target="_blank"> Rabe Datta </a>
+                            </small>
+                        </footer>
+                    </ul>
+                </div>
+
+            </nav>
+
+
+            <!-- services section -->
+            <section class="contact">
+                <h1 class="title"> Contact Us </h1>
+                <p class="sub-title"> If you are a developer and need assistance understanding JavaScript or React,
+                    please contact me at <a href="mailto:codemarch123@gmail.com"> codemarch123@gmail.com</a>.</p>
+                <main class="main-content">
+                    <form action="#" class="contact-card">
+                        <div class="row">
+                            <div class="column">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="Your name here" required>
+                            </div>
+                            <div class="column">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Your email here" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" placeholder="Your subject here" required>
+                            </div>
+                            <div class="column">
+                                <label for="contact">Contact Number</label>
+                                <input type="tel" id="contact" placeholder="Your phone number here">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <label for="issue">Message </label>
+                                <textarea id="issue" placeholder="Send us a message" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <button>Submit</button>
+                    </form>
+
+                    <div class="contact-info-container">
+
+                        <div class="contact-row">
+                            <div class="icon-column">
+                                <img src="./assets/mapIcons.png" alt="" width="50px" class="icon">
+                            </div>
+                            <div class="info-column">
+                                <h5 class="address-title"> Address</h5>
+                                <address class="address"> Shavige Malleshware <br />
+                                    Hills, 1st Stage <br />
+                                    Kumaraswamy Layout, <br />
+                                    Bengaluru, Karnataka <br />
+                                    560078
+                                </address>
+                            </div>
+                        </div>
+
+                        <div class="contact-row">
+                            <div class="icon-column">
+                                <img src="./assets/atIcon.png" alt="email" class="icon" width="50px">
+                            </div>
+                            <div class="info-column">
+                                <h5> Email </h5>
+                                <a href="mailto:codemarch123@gmail.com"> codemarch123@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-row">
+                            <div class="icon-column">
+                                <img src="./assets/twitterIcon.png" alt="twitter" class="icon" width="50px">
+                            </div>
+                            <div class="info-column">
+                                <h5 class="icon"> Twitter </h5>
+                                <a href="https://twitter.com/Codemarch" target="_blank"> Codemarch</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </main>
+
+
+            </section>
+
+
+        </div>
+
+        <script>
+
+            const $hamButton = document.querySelector('.ham-container');
+            const $logo = document.querySelector('.logo');
+            const $navBar = document.querySelector('.navBar');
+            const $navItems = document.querySelector('.nav-items');
+
+
+            const $form = document.querySelector('form');
+            const $contact = document.querySelector('.contact');
+
+
+            $hamButton.addEventListener('click', function () {
+                $hamButton.classList.toggle('change');
+                $contact.classList.toggle('hide-contact');
+                $navItems.classList.toggle("hide-nav-items");
+            })
+
+            $form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                $form.reset();
+            })
+
+
+            window.addEventListener('scroll', function (event) {
+                event.preventDefault();
+
+                if (window.scrollY >= 40) {
+                    $navBar.classList.add('changeNavHeight')
+                } else {
+                    $navBar.classList.remove('changeNavHeight')
+                }
+            });
+
+
+            $logo.addEventListener('click', function () {
+                if (!$navItems.classList.contains('hide-nav-items')) {
+                    $hamButton.classList.remove('change');
+                    $navItems.classList.add("hide-nav-items");
+                    $contact.classList.remove('hide-contact');
+                }
+            })
+
+        </script>
+    </body>
+
+
+
+</body>
+
+</html>

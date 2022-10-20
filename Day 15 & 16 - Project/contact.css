@@ -1,0 +1,149 @@
+.contact {
+  animation: 1s fadeIn;
+}
+
+.hide-contact {
+  display: none;
+}
+
+.contact .title {
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin-top: 0;
+}
+
+.contact .sub-title {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+a {
+  color: var(---form-btn);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: rgba(26, 32, 110, 0.6);
+}
+
+/* main-contant */
+
+.main-content {
+  display: grid;
+  row-gap: 1em;
+  margin-bottom: 0.2em;
+}
+
+.main-content .contact-card,
+.main-content .contact-info-container {
+  border-radius: 0.2em;
+  padding-top: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+/* contact form  */
+
+.contact-card {
+  background: var(---form-bg);
+  border-radius: 0.2em;
+}
+
+.row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8em 1.1em;
+  margin-bottom: 1em;
+}
+
+label {
+  color: #1c093c;
+  font-size: 14px;
+}
+textarea,
+input {
+  width: 100%;
+  font-weight: 400;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+  border: 1.2px solid #c4cae0;
+  margin-top: 5px;
+}
+
+textarea {
+  resize: none;
+  height: 150px;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border-color: #6f6df4;
+}
+
+button {
+  width: 100%;
+  border: none;
+  padding: 0.5em 1.2em;
+  background: var(---form-btn);
+  color: var(---bg-color);
+  cursor: pointer;
+}
+
+button:focus,
+button:hover {
+  opacity: 0.9;
+}
+
+input:focus {
+  border-color: #6f6df4;
+}
+
+textarea,
+input,
+button {
+  font-family: inherit;
+}
+
+/* contact information  */
+.contact-info-container {
+  background: var(---form-bg);
+}
+
+.contact-info-container > * {
+  margin-bottom: 2em;
+}
+
+.contact-row {
+  display: flex;
+  gap: 3.5em;
+}
+
+.contact-row .icon {
+  width: 25px;
+}
+
+.info-column h5 {
+  margin: 0;
+}
+
+.info-column .address-title {
+  margin-bottom: 0.8em;
+}
+
+.info-column .address {
+  margin: 0;
+  font-style: normal;
+}
+
+/* media queries  */
+
+@media (min-width: 900px) {
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 1em;
+  }
+}
