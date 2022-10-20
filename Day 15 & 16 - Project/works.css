@@ -1,0 +1,61 @@
+.works {
+  animation: 1s fadeIn;
+}
+
+.hide-works {
+  display: none;
+}
+
+.works .title {
+  font-weight: 500;
+  font-size: 1.35rem;
+  margin-top: 0;
+}
+
+.works .sub-title {
+  font-size: 0.95rem;
+}
+
+.works .images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
+  gap: 0.5em;
+}
+
+.works .img-hover-zoom:nth-last-of-type(-n + 2) {
+  margin-bottom: 0.5em;
+}
+
+.img-hover-zoom {
+  overflow: hidden;
+}
+
+.img-hover-zoom .img {
+  transform-origin: 0 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.img-hover-zoom:hover img {
+  opacity: 0.5;
+}
+
+.works .images .img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@media (min-width: 700px) {
+  .works .images {
+    max-width: 86vw;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 1800px) {
+  .works .images {
+    max-width: 82vw;
+    margin-inline: auto;
+  }
+}
