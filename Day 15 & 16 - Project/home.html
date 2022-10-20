@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/favicon.ico">
     <link rel="stylesheet" href="./global.css">
     <link rel="stylesheet" href="./home.css">
     <script src="./script.js" defer></script>
-    <title> Day 15 & 16 - Project </title>
+    <title> Home </title>
 </head>
 
 <body>
@@ -17,7 +18,7 @@
     <!-- navbar section -->
     <div class="wrapper navBar">
         <a class="logo" href="#"> Codemarch Academy </a>
-        <div class="ham-container" onclick="toggleHamburger(this)">
+        <div class="ham-container">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
@@ -32,13 +33,19 @@
             <!-- side icons -->
             <div class="social-media-icons">
                 <div class="centered-icons">
-                    <a href="#"> <img src="./assets/facebookIcon.png" alt="" class="icon icon-fb"> </a>
-                    <a href="https://twitter.com/Codemarch"> <img src="./assets/twitterIcon.png" alt="" class="icon">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="./assets/facebookIcon.png" alt="facebook" class="icon icon-fb"> </a>
+                    <a href="https://twitter.com/Codemarch" target="_blank">
+                        <img src="./assets/twitterIcon.png" alt="twitter" class="icon">
                     </a>
-                    <a href="#"> <img src="/assets/IngramIcon.png" alt="" class="icon"> </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="/assets/IngramIcon.png" alt="instagram" class="icon">
+                    </a>
                 </div>
                 <div class="last-icon">
-                    <a href="#"> <img src="/assets/atIcon.png" alt="" class="icon icon-email"></a>
+                    <a href="mailto:codemarch123@gmail.com">
+                        <img src="/assets/atIcon.png" alt="email" class="icon icon-email">
+                    </a>
                 </div>
             </div>
 
@@ -48,10 +55,12 @@
                 <ul>
                     <li><a href="./home.html"> Home </a> </li>
                     <li><a href="./services.html"> Services </a> </li>
-                    <li><a href="./work.html"> Work </a> </li>
+                    <li><a href="./works.html"> Work </a> </li>
                     <li><a href="./contact.html"> Contact</a> </li>
                     <footer>
-                        <small>&copy; Created by Rabe Datta </small>
+                        <small>&copy; Created by
+                            <a href="https://github.com/RabeDatta" target="_blank"> Rabe Datta </a>
+                        </small>
                     </footer>
                 </ul>
             </div>
@@ -67,7 +76,7 @@
                     <p> We help developers to understand JavaScript & React in depth
                         Web dev & design resources
                     </p>
-                    <a href="#" class="btn-primary"> Get Started </a>
+                    <a href="./contact.html" class="btn-primary"> Get Started </a>
                 </div>
                 <div>
                     <img class="hero-img" src="./assets/mainSectionImg.jpeg" alt="random">
@@ -79,11 +88,28 @@
     </div>
 
     <script>
-        function toggleHamburger(x) {
-            document.querySelector('.ham-container').classList.toggle('change');
-            document.querySelector('.hero').classList.toggle('hide-hero');
-            document.querySelector('.nav-items').classList.toggle("hide-nav-items");
-        }
+
+        const $hamButton = document.querySelector('.ham-container');
+        const $logo = document.querySelector('.logo');
+        const $navBar = document.querySelector('.navBar');
+        const $navItems = document.querySelector('.nav-items');
+
+        const $hero = document.querySelector('.hero');
+
+        $hamButton.addEventListener('click', function () {
+            $hamButton.classList.toggle('change');
+            $hero.classList.toggle('hide-hero');
+            $navItems.classList.toggle("hide-nav-items");
+        })
+
+        $logo.addEventListener('click', function () {
+            if (!$navItems.classList.contains('hide-nav-items')) {
+                $hamButton.classList.remove('change');
+                $navItems.classList.add("hide-nav-items");
+                $hero.classList.remove('hide-hero');
+            }
+        })
+
     </script>
 </body>
 
